@@ -1,0 +1,7 @@
+.mydiv {background-color: #abcded; }
+#container_test{width: 400px;height: 400px;background-color: red;}
+
+.date_list_wrap {width:300px;}
+.date_list_wrap td {width:42px;}
+.date_list_wrap .holidays {color:#ff6900;background-color:#eee;}
+.date_list_wrap .sltTd {color:#eee;background-color:#ff6900;}
