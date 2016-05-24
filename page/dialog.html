@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		dialog test
+	</title>
+</head>
+<body>
+<h2>这里会有一个dialog</h2>
+<label for="buttonId">传哪个button呢？</label>
+<input type="text" id="buttonId"></input>
+<button type="button" id="mybtn">click me</button>
+<div id="dialog" class="ui2-dialog-wraper" style="display: none;"> 
+    <strong class="ui2-dialog-header">
+        <a href="javascript:void(0);" class="ui2-dialog-close">&times;</a>
+        <span class="ui2-dialog-title">试验用弹窗</span>
+    </strong>
+    <div class="ui2-dialog-content">
+        123
+    </div>
+    <div class="ui2-dialog-buttons"></div>
+</div>
+<div id="myContent1" style="background-color:white;display: none">
+    报名成功
+</div>
+<div id="myContent2" style="background-color:white;display: none">
+    报名失败
+</div>
+<div id="myContent3" style="background-color:white;display: none">
+    请注册
+    <label>手机号</label><input id="mobileNum" type="text"></input>
+    <label>密码</label><input id="pwsd" type="password"></input>
+</div>
+
+
+<script type="text/javascript">
+	
+require.async("/static/dialog.js");
+</script>
+
+</body>
+</html>

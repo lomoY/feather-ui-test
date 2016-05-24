@@ -1,4 +1,4 @@
-require.async(["common:jquery", 'common:dialog','common:template'], function($, Dialog,Template) {
+require.async(["common:jquery", 'common:dialog','common:template','common:mask'], function($, Dialog,Template,Mask) {
 	var page = {
 
 		init: function() {
@@ -20,15 +20,7 @@ require.async(["common:jquery", 'common:dialog','common:template'], function($, 
 		},
 		//创建日历表结束
 		
-		//事件绑定开始
-		addEvents: function() {
-			var _this = this;
-			_this.$mybtn.on("click", function() {
-				alert("点了我了");
-				
-			});
-		},
-		//事件绑定结束
+
 
 		//获取数据开始
 		getDayList: function(year,curMonth) {

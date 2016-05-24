@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="mydiv">HI,this is just a test</div>	
+	<button id='getInfo' value="点击我获取json数据">我的按钮</button>
+
+	<div id="mybox">
+	<select id="myyear" class="form-control year">
+							<?php for ($x=$currentYear; $x<=$maxYear; $x++) { ?>
+								<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
+							<?php }?> 
+						</select>
+						<label class="control-label">年</label>
+						<select id="mymonth" data-currentmonth="<?php echo isset($currentMonth) ? $currentMonth : 0;?>" class="form-control month">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+<label class="control-label">月</label>
+	<div id="dateListWrap" class="date_list_wrap clearfix"></div>
+</div>
+	<script>
+		pageConfig = {
+			getDaylistURL:'<?php echo $myURL["getDaylistURL"];?>',
+
+		}
+	require.async("/static/wkdaylist-test/wkdaylist-test.js");
+	</script>
+</body>
+</html>

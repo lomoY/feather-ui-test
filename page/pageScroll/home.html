@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>H5 Full Screen Scroll</title>
+	<link rel="stylesheet" type="text/css" href="/static/pageScroll/home.css">
+</head>
+<body>
+<div class="st-scroll">
+	<div id="pageOne">
+		<button id="pageDownBtn"type="button">点我向下滑动</button>
+	</div>
+	<div id=pageTwo>
+		<button id="pageUpBtn"type="button">点我向上滑动</button>
+	</div>
+</div>
+<script type="text/javascript">
+require.async(["common:jquery"], function($) {
+	var page = {
+		init: function() {
+			this.$pageDown = $("#pageDownBtn");
+			this.$pageUp=$("#pageUpBtn");
+			this.addEvent();
+		},
+
+		addEvent:function(){
+			var _this = this;
+			this.$pageDown.on("click",function(){
+				$(".st-scroll").removeClass("pageUp");
+				$(".st-scroll").addClass("pageDown");
+
+			});
+			this.$pageUp.on("click",function(){
+				$(".st-scroll").removeClass("pageDown");
+				$(".st-scroll").addClass("pageUp")
+			})
+
+		}
+	};
+	page.init();
+});
+</script>
+</body>
+</html>
